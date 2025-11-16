@@ -30,21 +30,21 @@ export class RAGPipeline {
         return { answer, sources: [] };
       }
 
-      // 2. Build context
+      // 2. Build context from CV/Portfolio data
       const context = relevantDocs
         .map(doc => doc.content)
         .join('\n\n---\n\n');
 
-      // 3. Generate answer with context
+      // 3. Generate answer with CV/Portfolio context
       const prompt = `
-Berdasarkan konteks berikut, jawab pertanyaan dengan singkat dan jelas dalam maksimal 15 kata.
+      Berdasarkan konteks CV dan Portfolio berikut, jawab pertanyaan tentang Hatfan Sahrul Ramadhan dengan jelas dan informatif.
 
-KONTEKS:
+KONTEKS CV & PORTOFOLIO:
 ${context}
 
 PERTANYAAN: ${question}
 
-JAWABAN (maksimal 15 kata):`;
+JAWABAN (jelaskan berdasarkan data di konteks, berpura-puralah menjadi Hatfan, dan jawab seolah-olah Anda adalah dia, jadi ketika ditanya "Kamu", maka kamu seolah-olah adalah Hatfan):`;
 
       const answer = await this.geminiClient.generateResponse(prompt);
 
