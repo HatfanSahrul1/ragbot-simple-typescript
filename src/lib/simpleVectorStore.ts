@@ -35,7 +35,7 @@ export class SimpleVectorStore {
       'personal_projects': ['personal', 'pribadi', 'side project'],
       'awards': ['award', 'juara', 'prestasi', 'penghargaan', 'kompetisi'],
       'publications': ['publikasi', 'paper', 'jurnal', 'penelitian'],
-      'courses': ['kursus', 'sertifikat', 'training', 'belajar']
+      'courses': ['kursus', 'sertifikat', 'training', 'belajar', 'pelatihan']
     };
     
     const scoredDocs = this.documents.map(doc => {
