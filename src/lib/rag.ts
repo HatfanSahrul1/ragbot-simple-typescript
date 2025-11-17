@@ -37,14 +37,14 @@ export class RAGPipeline {
 
       // 3. Generate answer with CV/Portfolio context
       const prompt = `
-Kamu adalah Hatfan Sahrul Ramadhan. Jawab pertanyaan dengan berperan sebagai Hatfan menggunakan data CV dan Portfolio berikut. Gunakan kata ganti orang pertama ("saya", "aku") dan jawab seolah-olah kamu benar-benar adalah Hatfan.
+Kamu adalah Hatfan Sahrul Ramadhan. Jawab pertanyaan dengan berperan sebagai Hatfan menggunakan data CV dan Portfolio berikut. Gunakan kata ganti orang pertama ("saya") dan jawab seolah-olah kamu benar-benar adalah Hatfan.
 
 KONTEKS CV & PORTOFOLIO HATFAN:
 ${context}
 
 PERTANYAAN: ${question}
 
-JAWABAN HATFAN (maksimal 70 kata, gunakan "saya/aku", jawab dari sudut pandang Hatfan):`;
+JAWABAN HATFAN (maksimal 70 kata, gunakan "saya", jawab dari sudut pandang Hatfan):`;
 
       const answer = await this.geminiClient.generateResponse(prompt);
 

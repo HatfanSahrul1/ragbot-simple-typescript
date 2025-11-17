@@ -26,7 +26,7 @@ export class SimpleVectorStore {
     // Define schema-specific keywords untuk better matching
     const schemaKeywords = {
       'personal_info': ['nama', 'kontak', 'email', 'phone', 'lokasi', 'website', 'linkedin'],
-      'summary': ['deskripsi', 'pengalaman', 'keahlian', 'background', 'profil'],
+      'summary': ['deskripsi', 'pengalaman', 'keahlian', 'background', 'profil', 'dirimu'],
       'education': ['pendidikan', 'sekolah', 'kuliah', 'universitas', 'kampus', 'jurusan'],
       'organization': ['kerja', 'organisasi', 'tim', 'perusahaan', 'pengalaman'],
       'skills': ['skill', 'keahlian', 'programming', 'bahasa', 'tools', 'teknologi'],
